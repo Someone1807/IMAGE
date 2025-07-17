@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Someone Special ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff7eb3, #ff758c);
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+        
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            margin: 20px 0 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeIn 2s;
+        }
+        
+        .heart {
+            color: #ff0a54;
+            font-size: 2rem;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        
+        .photo-collage {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        
+        .photo {
+            width: 1080px;
+            height: 1062px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        
+        .photo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+        
+        .message-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+        
+        .secret-btn {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .secret-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            font-size: 20px;
+            color: #ff0a54;
+            animation: floatUp 4s linear infinite;
+            opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Photo animations with different delays */
+        .photo:nth-child(1) { animation-delay: 0.5s; }
+        .photo:nth-child(2) { animation-delay: 1s; }
+        .photo:nth-child(3) { animation-delay: 1.5s; }
+        .photo:nth-child(4) { animation-delay: 2s; }
+        .photo:nth-child(5) { animation-delay: 2.5s; }
+        .photo:nth-child(6) { animation-delay: 3s; }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2.8rem; }
+            .photo { width: 100px; height: 100px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday <span id="crushName">Savni</span> <span class="heart">❤️</span></h1>
+        
+        <div class="photo-collage">
+            <img src="https://raw.githubusercontent.com/Someone1807/IMAGE/refs/heads/main/photo1.jpg" class="photo" alt="photo1">
+            <img src="https://raw.githubusercontent.com/Someone1807/IMAGE/refs/heads/main/photo2.jpg" class="photo" alt="photo2">
+            <img src="https://raw.githubusercontent.com/Someone1807/IMAGE/refs/heads/main/photo3.jpg" class="photo" alt="photo3">
+            <img src="https://raw.githubusercontent.com/Someone1807/IMAGE/refs/heads/main/photo4.jpg" class="photo" alt="photo4">
+            <img src="https://raw.githubusercontent.com/Someone1807/IMAGE/refs/heads/main/photo5.jpg" class="photo" alt="photo5">
+            <img src="https://raw.githubusercontent.com/Someone1807/IMAGE/refs/heads/main/photo7.jpg" class="photo" alt="photo7">
+        </div>
+        
+        <div class="message-box">
+            <p>=Wishing you the happiest birthday!.</p>
+            <p> Hope your day is as amazing as you are!<span class="heart">❤️</span></p>
+            <p>   Cheers  to another awesome year ahead </p>
+            
+            <button class="secret-btn" id="secretMessageBtn">Click for a secret message</button>
+            <p id="secretMessage" style="display: none; font-style: italic;">
+                I know I annoyed u alot but just for to do convo with you......             
+                              Hope you liked this!                  
+                        One thing plzz seenzone mt kra kro plzzzzz..😭😭
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Personalize with their name from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        if (name) {
+            document.getElementById('crushName').textContent = name;
+        }
+        
+        // Create floating hearts
+        function createHearts() {
+            const heart = document.createElement('div');
+            heart.className = 'floating-hearts';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+        
+        // Secret message button
+        document.getElementById('secretMessageBtn').addEventListener('click', function() {
+            const secret = document.getElementById('secretMessage');
+            if (secret.style.display === 'none') {
+                secret.style.display = 'block';
+                this.textContent = 'You saw nothing...';
+                
+                // Create lots of hearts when secret is revealed
+                for (let i = 0; i < 20; i++) {
+                    setTimeout(createHearts, i * 100);
+                }
+            } else {
+                secret.style.display = 'none';
+                this.textContent = 'Click for a secret message';
+            }
+        });
+        
+        // Create some initial floating hearts
+        setInterval(createHearts, 800);
+        
+        // Animate photos one by one
+        const photos = document.querySelectorAll('.photo');
+        photos.forEach((photo, index) => {
+            photo.style.animationDelay = `${index * 0.3}s`;
+        });
+    </script>
+</body>
+</html>
